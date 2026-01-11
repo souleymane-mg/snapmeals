@@ -61,6 +61,35 @@ app.post('/api/process-tiktok', async (req, res) => {
   }
 });
 
+// Get direct TikTok link endpoint (No Cloudinary)
+app.post('/api/get-direct-link', async (req, res) => {
+  try {
+    const { tiktokUrl } = req.body;
+
+    if (!tiktokUrl) {
+      return res.status(400).json({ error: 'TikTok URL is required' });
+    }
+
+    console.log(`\n🔄 Converting TikTok URL: ${tiktokUrl}`);
+
+    // Download TikTok video (extract direct URL)
+    const videoUrl = await downloadTikTokVideo(tiktokUrl);
+
+    console.log(`✅ Conversion successful: ${videoUrl}\n`);
+
+    res.json({
+      success: true,
+      videoUrl: videoUrl
+    });
+  } catch (error) {
+    console.error('❌ Error converting TikTok video:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`\n🚀 SnapMeal Backend Server running on http://localhost:${PORT}`);
