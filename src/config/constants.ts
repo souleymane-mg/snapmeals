@@ -22,7 +22,7 @@ export const DISHES: Dish[] = [
     calories: 950,
     isAvailable: true,
     // Using a direct MP4 link for native playback test
-    videoUrl: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
+    videoUrl: 'https://v9.tiktokcdn.com/ed7d01a010ba2c3db5b9de5734468c20/696551ea/video/tos/useast2a/tos-useast2a-pve-0068/og1N9j6IstGjgI1QJELhAfrGAukWDFF8efmRf0/?a=1233&bti=OUBzOTg7QGo6OjZAL3AjLTAzYCMxNDNg&ch=0&cr=13&dr=0&er=0&lr=all&net=0&cd=0%7C0%7C0%7C&cv=1&br=840&bt=420&cs=0&ds=1&ft=iusKbyt4ZZo0PDfFU-faQ94_U~j6JE.C~&mime_type=video_mp4&qs=0&rc=ZTM8PDo8NTg6aWY6OWc8aEBpanQ2aHc5cnFpNDMzNzczM0BhNmNjMGM0XzQxMl9gYy80YSNvc28xMmRrcmdhLS1kMTZzcw%3D%3D&vvpl=1&l=20260112035550435CB1E41C8AFA669892&btag=e00088000&cc=5'
   },
   {
     id: 'd1',
